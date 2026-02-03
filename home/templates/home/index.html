@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB X | Innovative Software Solutions</title>
+    <meta name="description" content="WEB X - Premium Website and Software Development Company based in Ettumanoor.">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Particles Background -->
+    <div id="tsparticles"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">WEB X</div>
+        <div class="nav-links">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>WEB X</h1>
+        <p>Crafting digital experiences that defy gravity. We specialize in cutting-edge Website and Software
+            Development, turning your vision into a digital masterpiece.</p>
+        <p class="location"><i class="fas fa-map-marker-alt"></i> Mangalam College, Ettumanoor</p>
+        <a href="{% url 'contact' %}" class="btn">Start Your Project</a>
+    </section>
+
+    <!-- Team Section -->
+    <section class="info-section">
+        <div class="card">
+            <h2>Our Team</h2>
+            <div class="team-list">
+                <div class="team-member">AMAL JAYAKUMAR</div>
+                <div class="team-member">ALBIN K KURIAN</div>
+                <div class="team-member">ABHI ANTO</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/9778185755" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Script -->
+    <script src="{% static 'home/script.js' %}"></script>
+</body>
+
+</html>

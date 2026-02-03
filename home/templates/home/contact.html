@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact WEB X</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Particles Background -->
+    <div id="tsparticles"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">WEB X</div>
+        <div class="nav-links">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <div class="contact-container">
+        <div class="card form-box">
+            <h2>Contact Us</h2>
+            <p style="margin-bottom: 2rem; color: #ccc;">Tell us about your project.</p>
+
+            <form id="contact-form">
+                {% csrf_token %}
+                <div class="input-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required placeholder="John Doe">
+                </div>
+
+                <div class="input-group">
+                    <label for="service">Service Required</label>
+                    <select id="service" required>
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="Website Development">Website Development</option>
+                        <option value="Software Development">Software Development</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="requirements">Requirements</label>
+                    <textarea id="requirements" rows="5" required
+                        placeholder="Describe your project needs..."></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Submit Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/9778185755" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Success Popup -->
+    <div class="popup-overlay" id="success-popup">
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Request Submitted!</h3>
+            <p>Our team will contact you soon.</p>
+            <button class="close-btn" id="close-popup-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="{% static 'home/script.js' %}"></script>
+
+</body>
+
+</html>
