@@ -7,6 +7,7 @@ class Contact(models.Model):
     ]
 
     name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=20, default='')
     service = models.CharField(max_length=50, choices=SERVICE_CHOICES)
     requirements = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)

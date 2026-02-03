@@ -22,7 +22,10 @@
 
     <!-- Navigation -->
     <nav>
-        <div class="logo">WEB X</div>
+        <a href="{% url 'index' %}" class="logo-container">
+            <img src="{% static 'home/images/logo.png' %}" alt="WEB X Logo" class="logo-img">
+            <span class="logo-text">WEB X</span>
+        </a>
         <div class="nav-links">
             <a href="{% url 'index' %}">Home</a>
             <a href="{% url 'contact' %}">Contact</a>
@@ -34,7 +37,7 @@
         <h1>WEB X</h1>
         <p>Crafting digital experiences that defy gravity. We specialize in cutting-edge Website and Software
             Development, turning your vision into a digital masterpiece.</p>
-        <p class="location"><i class="fas fa-map-marker-alt"></i> Mangalam College, Ettumanoor</p>
+
         <a href="{% url 'contact' %}" class="btn">Start Your Project</a>
     </section>
 
@@ -49,6 +52,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Slide to Call -->
+    <div class="call-slider-container">
+        <div class="call-slider-text">Slide to Call <i class="fas fa-arrow-right"></i></div>
+        <div class="call-slider-handle" id="call-slider-handle">
+            <i class="fas fa-phone"></i>
+        </div>
+    </div>
 
     <!-- WhatsApp Float -->
     <a href="https://wa.me/9778185755" class="whatsapp-float" target="_blank">
