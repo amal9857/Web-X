@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-change-me-before-production'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*'] # Allow all hosts for now (e.g., localhost, pythonanywhere)
+ALLOWED_HOSTS = ['webx.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home', # Our custom app
+    'home.apps.HomeConfig', # Our custom app
 ]
 
 MIDDLEWARE = [
@@ -104,8 +104,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static') # For production collection
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'home', 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
