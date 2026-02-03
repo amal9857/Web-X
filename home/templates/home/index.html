@@ -5,8 +5,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB X | Innovative Software Solutions</title>
-    <meta name="description" content="WEB X - Premium Website and Software Development Company based in Ettumanoor.">
+    <title>WEB X - #1 Website & Software Development Company | Premium Digital Solutions</title>
+    <meta name="description" content="WEB X - India's #1 Website and Software Development Company. Expert web developers, custom software solutions, mobile apps. Get premium digital services at affordable prices. Contact us today!">
+    <meta name="keywords" content="website development, software development, web design, mobile app development, digital marketing, SEO services, custom software, web developers India, best website company">
+    <meta name="author" content="WEB X Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="WEB X - #1 Website & Software Development Company">
+    <meta property="og:description" content="India's leading website and software development company. Premium digital solutions at affordable prices.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webx.pythonanywhere.com">
+    <meta property="og:image" content="{% static 'home/images/logo.png' %}">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WEB X - #1 Website & Software Development Company">
+    <meta name="twitter:description" content="India's leading website and software development company. Premium digital solutions.">
+    <meta name="twitter:image" content="{% static 'home/images/logo.png' %}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://webx.pythonanywhere.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'home/images/logo.png' %}">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "WEB X",
+        "url": "https://webx.pythonanywhere.com",
+        "logo": "https://webx.pythonanywhere.com{% static 'home/images/logo.png' %}",
+        "description": "India's #1 Website and Software Development Company",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ettumanoor",
+            "addressCountry": "India"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9778185755",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://wa.me/9778185755"
+        ]
+    }
+    </script>
+    
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'home/style.css' %}">
     <!-- Particles.js -->
